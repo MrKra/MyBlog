@@ -1,16 +1,7 @@
 $(document).ready(function(){
-	
-/** ON Main Slider **/
-$("#main-slider").slick({
-	adaptiveHeight: true,
-	autoplay: true,
-	autoplaySpeed: 5000,
-	arrows: true,
-	fade: true,
-});	
 
 /** News Rotate **/
-$("#news-rotator").slick({
+$("#slider-news").slick({
     infinite: true,
     dots: true,
     slidesToShow: 3,
@@ -21,7 +12,7 @@ $("#news-rotator").slick({
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 3,
                     infinite: true,
                     dots: true
