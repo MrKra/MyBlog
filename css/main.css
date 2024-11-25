@@ -62,7 +62,7 @@ a:focus{
 /** ON Slider Card **/
 #main-slider{
 	margin: 0;
-	padding: 20px 0;
+	padding: 20px 0 15px 0;
 	border-bottom: 2px solid red;
 }
 .slider-card{
@@ -70,7 +70,6 @@ a:focus{
 	padding: 0;
 	height: 350px;
 	position: relative;
-	border: 1px solid red;
 }
 .slider-card img{
 	margin: 0;
@@ -142,6 +141,68 @@ a:focus{
 	font-size: 14px;
 	font-weight: 500;
 	color: rgba(255,255,255,0.95);
+}
+
+/** ON Slider Dots **/
+#slider-news{
+	padding-bottom: 15px !important;
+}
+#slider-news .slick-next,
+#slider-news .slick-prev{
+	display: inline-block;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	border: none;
+	background-color: transparent;
+	z-index: 1;
+}
+#slider-news .slick-next .fa-chevron-right::before{
+	content: "\f138";
+	font-family: "Font Awesome 6 Free";
+	font-size: 24px;
+	color: rgba(63,63,63,0.95);
+}
+#slider-news .slick-prev .fa-angle-left::before{
+	content: "\f137";
+	font-family: "Font Awesome 6 Free";
+	font-size: 24px;
+	color: rgba(63,63,63,0.95);
+}
+#slider-news .slick-next{
+	bottom: -30px;
+	right: 2%;
+}
+#slider-news .slick-prev{
+	font-size: 20px;
+	bottom: -30px;
+	right: 6%;
+}
+#slider-news .slick-next .fa-solid:hover::before,
+#slider-news .slick-prev .fa-solid:hover::before{
+	color: rgba(255,30,0,0.95);
+}
+
+#slider-news .slick-dots{
+	text-align: right;
+	bottom: -28px;
+	width: 90%;
+}
+#slider-news .slick-dots li button::before{
+	content: "\f0c8";
+	font-family: "Font Awesome 6 Free";
+	font-size: 16px;
+	color: rgba(0,0,0,0.95);
+	opacity: 0.35;
+}
+#slider-news .slick-dots li button:hover:before, 
+#slider-news .slick-dots li button:focus:before{
+	opacity: 0.75; 
+}
+#slider-news .slick-dots li.slick-active button:before{
+	color: rgba(59,113,199,0.95);;
+	opacity: 1;
 }
  
 /** ON News Card **/
