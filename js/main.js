@@ -4,7 +4,7 @@ $(document).ready(function(){
 $("#slider-news").slick({
     infinite: true,
     dots: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
 	slidesToScroll: 1,
 	centerMode: true, 
 	centerPadding: "",

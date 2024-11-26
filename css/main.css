@@ -75,6 +75,9 @@ a:focus{
 	margin: 0 15px;
 	padding: 0;
 	height: 350px;
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
 	position: relative;
 }
 .slider-card img{
@@ -83,6 +86,7 @@ a:focus{
 	display: block;
 	height: 100%;
 	width: 100%;
+	border-radius: 10px;
 }
 .slider-card .slider-card-body{
 	position: absolute;
@@ -91,6 +95,7 @@ a:focus{
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0,0,0,0.35);
+	border-radius: 10px;
 	transition: all 0.5s;
 }
 .slider-card:hover .slider-card-body{
@@ -100,14 +105,16 @@ a:focus{
 	margin: 10px 20px;
 	padding: 0;
 }
-.slider-card .slider-card-cats a.btn{
+.slider-card .slider-card-cats a.btn,
+.news-card .news-card-cats a{
 	margin-right: 10px;
 	padding: 6px 12px;
 	font-size: 10px;
 	font-weight: 500;
 	color: rgba(255,255,255,0.95);
 }
-.slider-card .slider-card-cats i.fa-solid{
+.slider-card .slider-card-cats i.fa-solid,
+.news-card .news-card-cats i.fa-solid{
 	margin-right: 5px;
 	font-size: 10px;
 	color: rgba(255,255,255,0.95);
@@ -183,7 +190,7 @@ a:focus{
 #slider-news .slick-prev{
 	font-size: 20px;
 	bottom: -30px;
-	right: 6%;
+	right: 4.5%;
 }
 #slider-news .slick-next .fa-solid:hover::before,
 #slider-news .slick-prev .fa-solid:hover::before{
@@ -193,7 +200,7 @@ a:focus{
 #slider-news .slick-dots{
 	text-align: right;
 	bottom: -28px;
-	width: 90%;
+	width: 92%;
 }
 #slider-news .slick-dots li button::before{
 	content: "\f0c8";
@@ -225,6 +232,12 @@ a:focus{
 .news-card .news-thumb{
 	height: 245px;
 	position: relative;
+}
+.news-card .news-card-cats{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0 0 5px 5px;
 }
 .news-card .news-thumb img{
 	display: block;
