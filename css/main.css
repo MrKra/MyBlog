@@ -181,7 +181,7 @@ a:focus{
 }
 #slider-news .slick-next .fa-solid:hover::before,
 #slider-news .slick-prev .fa-solid:hover::before{
-	color: rgba(255,30,0,0.95);
+	color: rgba(59,113,199,0.95);
 }
 
 #slider-news .slick-dots{
@@ -201,7 +201,7 @@ a:focus{
 	opacity: 0.75; 
 }
 #slider-news .slick-dots li.slick-active button:before{
-	color: rgba(59,113,199,0.95);;
+	color: rgba(59,113,199,0.95);
 	opacity: 1;
 }
  
