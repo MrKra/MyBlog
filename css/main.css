@@ -38,18 +38,17 @@ a:focus{
 
 /** ON Header ***/
 .header,
-.footer,
-.breadcrumbs{
+.footer{
 	background: rgba(255,255,255,0.95);
 }
-.header .navbar,
-.breadcrumbs{
+.header .navbar{
 	box-shadow: none;
 }
 .header .navbar-brand{
+	margin-left: 15px;
+	margin-right: 20%;
 	font-size: 24px;
 	margin-bottom: 5px;
-	margin-right: 100px;
 }
 .header .nav-item{
 	font-size: 16px;
@@ -63,13 +62,38 @@ a:focus{
 	padding: 5px;
 	font-size: 26px;
 }
+.header .form-search{
+	align-items: center;
+}
+.header .form-control{
+	align-items: center;
+	width: 550px;
+}
 
 
 /** ON Slider Card **/
 #main-slider{
 	margin: 0;
 	padding: 20px 0 15px 0;
-	border-bottom: 2px solid red;
+	position: relative;
+}
+#main-slider::before{
+	position: absolute;
+    left: 0;
+    bottom: 1px;
+    right: 0;
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+#main-slider::after{
+	position: absolute;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.55);
 }
 .slider-card{
 	margin: 0 15px;
@@ -220,7 +244,7 @@ a:focus{
  
 /** ON News Card **/
 .news-card{
-	margin: 15px 0;
+	margin: 0 15px 25px 15px;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
 	transition: all 0.3s;
@@ -303,7 +327,7 @@ a:focus{
 /** ON Content **/
 .content,
 .sidebar{
-	margin: 20px 0;
+	margin: 10px 0 20px 0;
 }
 .content .news-thumb{
 	height: 220px;
@@ -602,7 +626,7 @@ a:focus{
 
 /** ON Sidebar **/
 .sidebar .widget{
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 	padding: 20px;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
@@ -631,6 +655,10 @@ a:focus{
 	align-items: center;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
+.sidebar .widget-list-item:last-child{
+	border-bottom: none;
+	padding-bottom: 0;
+}
 .sidebar .widget-list-link{
 	margin: 0;
 	padding: 0;
@@ -640,13 +668,19 @@ a:focus{
 	transition: all .2s ease-in-out;
 }
 .sidebar .widget-list-link i{
-	margin-right: 5px;
+	margin-right: 10px;
 	font-size: 16px;
 	color: rgba(23,23,23,0.95);
 }
 .sidebar .widget-list-link:hover{
 	padding-left: 5px;
 	color: rgba(59,113,199,0.95);
+}
+
+/** ON Breadcrumb ***/
+.breadcrumb{
+	margin: 10px 0 0 15px;
+	padding: 0;
 }
 
 /** ON Footer ***/
@@ -659,6 +693,18 @@ footer p{
 	line-height: 1.5;
 	color: rgba(71,71,71,1.00);
 	cursor: default;
+}
+
+@media only screen and (max-width: 1024px){
+	
+	/**ON Search**/
+	.header .navbar-brand{
+		margin-right: 10%;
+	}
+	.header .form-control{
+		width: 400px;
+	}
+	
 }
 
 @media all and (min-width: 992px){
@@ -680,6 +726,16 @@ footer p{
 		font-size: 22px;
 	}
 }
+
+@media only screen and (max-width: 540px){
+	
+	/**ON Search**/
+	.header .form-control{
+		width: auto;
+	}
+	
+}
+
 
 @media only screen and (max-width: 240px){
 	/** ON News Card **/
