@@ -1,0 +1,588 @@
+@charset "utf-8";
+body{
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 28px;
+	background: rgba(94,94,94,0.25);
+	color: rgba(0,0,0,0.95);
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+	transition: all .5s;
+	color: rgba(18,18,18,0.95);
+}
+a:hover,
+a:focus{
+	text-decoration: none;
+	color: rgba(59,113,199,0.95);
+}
+::selection{
+	background-color: rgba(42,42,42,0.95);
+	color: rgba(255,255,255,0.95);
+}
+.wraper{
+	margin: 20px 0;
+	padding: 0;
+}
+.wraper-post{
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+
+/********
+ON Header
+********/
+.header{
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.header .header-nav{ 
+	padding: 15px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .header-logo{
+	font-size: 26px;
+	color: rgba(0,0,0,0.8);
+	justify-content: flex-end;
+	flex-grow: 1;
+}
+.header .form-search{
+	flex-grow: 2;
+	margin: 0 15px;
+}
+.header .header-soc{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	flex-grow: 1;
+}
+
+/************
+ON News Card
+************/
+.news-card{
+	margin: 0 0 20px 0;
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+	transition: all 0.5s;
+	border-radius: 10px;
+}
+.news-card:hover,
+.news-card:focus{
+	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.25);
+}
+.news-card .news-thumb{
+	height: 245px;
+	position: relative;
+}
+.news-card .news-thumb img{
+	display: block;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+.news-card .news-cats{
+	position: absolute;
+	padding: 0 15px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.news-card .news-cats a,
+.content-popular .news-cats a{
+	padding: 0px 10px;
+	margin-right: 12px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    vertical-align: bottom;
+    background: rgba(0, 0, 0, 0.80);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.35);
+    border-radius: 10rem;
+}
+.news-card .news-cats a::before,
+.content-popular .news-cats a::before{
+	content: "\f5fd";
+	font-family: "Font Awesome 6 Pro";
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.95);
+	margin-right: 5px;
+}
+.news-card .news-cats a:hover,
+.content .news-cats a:hover,
+.content-popular .news-cats a:hover{
+	color: rgba(0,0,0,0.95);
+	background: rgba(255, 255, 255, 0.80);
+}
+.news-card .news-cats a:hover::before,
+.content .news-cats a:hover::before,
+.content-popular .news-cats a:hover::before{
+	color: rgba(0,0,0,0.95);
+}
+.news-card .news-title,
+.news-card .news-text{
+	margin: 0;
+	padding: 15px;
+}
+.news-card .news-text,
+.news-card .news-text p{
+	margin: 0;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: left;
+	line-height: 1.4;
+	color: rgba(58,58,58,0.95);
+	cursor: default;
+}
+.news-card .news-title h3,
+.news-card .news-title a,
+.content-popular .news-title h3,
+.content-popular .news-title a{
+	margin: 0;
+	padding: 0;
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: left;
+	cursor: pointer;
+	color: rgba(0,0,0,0.95);
+	transition: all 0.3s;
+}
+.news-card .news-title h3:hover,
+.news-card .news-title h3:hover a,
+.content-popular .news-title h3:hover,
+.content-popular .news-title h3:hover a{
+	color: rgba(59,113,199,0.95);
+}
+.news-card .news-meta{
+	padding: 5px 15px;
+}
+.news-card .news-meta,
+.content .news-meta,
+.content-popular .news-meta{
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.news-card .news-meta a,
+.news-card .news-meta span,
+.content .news-meta a,
+.content .news-meta span,
+.content-popular .news-meta a,
+.content-popular .news-meta span{
+	margin-right: 25px;
+	font-size: 14px;
+	font-weight: 500;
+	color: rgba(23,23,23,0.95);
+	text-transform: none;
+}
+.news-card .author::before,
+.news-card .date::before,
+.news-card .comments::before,
+.content .author::before,
+.content .date::before,
+.content .comments::before,
+.content .time-clock::before,
+.content-popular .author::before,
+.content-popular .date::before,
+.content-popular .comments::before{
+	font-family: "Font Awesome 6 Pro";
+	font-size: 16px;
+	margin-right: 10px;
+}
+.news-card .author::before,
+.content .author::before,
+.content-popular .author::before{
+	content: "\f007";
+}
+.news-card .date::before,
+.content .date::before,
+.content-popular .date::before{
+	content: "\f073";
+}
+.news-card .comments::before,
+.content .comments::before,
+.content-popular .comments::before{
+	content: "\f086";
+}
+.content .time-clock::before{
+	content: "\f017";
+}
+.news-card .news-meta a:hover,
+.content .news-meta a:hover,
+.content-popular .news-meta a:hover,
+.news-card .news-meta a:hover::before,
+.content .news-meta a:hover::before,
+.content-popular .news-meta a:hover::before{
+	color: rgba(59,113,199,0.95);
+}
+
+/************
+ON Content
+************/
+.content{
+	padding: 20px 60px;
+	position: relative
+}
+.content::after{
+	position: absolute;
+	top: 0;
+    right: 0;
+    content: "";
+    height: 100%;
+    border-right: 1px solid rgba(255,255,255, 0.35);
+}
+.content .news-cats,
+.content .news-meta,
+.content .news-tags{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+.content .news-cats a,
+.content .news-tags a{
+	padding: 0px 12px;
+	margin-right: 15px;
+	font-size: 14px;
+	font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    vertical-align: bottom;
+    background: rgba(0, 0, 0, 0.80);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.35);
+    border-radius: 10rem;
+}
+.content .news-cats a::before{
+	content: "\f5fd";
+	font-family: "Font Awesome 6 Pro";
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.95);
+	margin-right: 5px;
+}
+.content .news-title{
+	margin: 15px 0;
+	padding: 0;
+}
+.content .news-title h1{
+	margin: 0;
+	padding: 0;
+	display: block;
+	font-size: 40px;
+	font-weight: 600;
+	color: rgba(0,0,0,0.95);
+	cursor: default;
+}
+.content .news-meta{
+	padding: 10px 0;
+}
+.content .news-img{
+	margin-top: 20px;
+	margin-bottom: 40px;
+	height: 550px;
+}
+.content .news-img img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.content .news-img figcaption{
+	margin-top: 5px;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	font-style: italic;
+	cursor: default;
+	color: rgba(23,23,23,0.85);
+}
+.content .news-text{
+	margin-bottom: 20px;
+}
+.content .news-text p{
+	margin-bottom: 10px;
+	display: block;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: justify;
+	cursor: default;
+	color: rgba(23,23,23,0.95);
+}
+.content .news-text img{
+	margin: 20px 0;
+	display: block;
+	height: 550px;
+	width: 100%;
+}
+.content .news-text a{
+	font-size: 20px;
+	color: rgba(59,113,199,0.95);
+	border-bottom: 2px solid rgba(59,113,199,0.95);
+}
+.content .news-text a:hover{
+	color: rgba(23,23,23,0.95);
+	border-bottom: 2px dashed rgba(59,113,199,0.95);
+}
+.content .news-text h1,
+.content .news-text h2,
+.content .news-text h3,
+.content .news-text h4,
+.content .news-text h5,
+.content .news-text h6{
+	margin-bottom: 15px;
+	display: block;
+	color: rgba(23,23,23,0.95);
+	cursor: default;
+	font-weight: 600;
+}
+.content .news-text h1{
+	font-size: 40px;
+}
+.content .news-text h2{
+	font-size: 38px;
+}
+.content .news-text h3{
+	font-size: 36px;
+}
+.content .news-text h4{
+	font-size: 34px;
+}
+.content .news-text h5{
+	font-size: 32px;
+}
+.content .news-text h6{
+	font-size: 30px;
+}
+.content .news-text ul,
+.content .news-text ol{
+	margin: 10px 0;
+	list-style: disc;
+	list-style-position: outside;
+}
+.content .news-text ul li,
+.content .news-text ol li{
+	margin: 0;
+	padding: 5px 0;
+	font-size: 20px;
+	color: rgba(23,23,23,0.95);
+}
+.content .news-text ul li ul,
+.content .news-text ol li ol{
+	margin-left: 20px;
+}
+.content .news-tags{
+	margin-top: 20px;
+}
+.content .news-tags a{
+	font-size: 12px;
+    color: rgba(0, 0, 0, 0.95);
+    background: rgba(255, 255, 255, 0.95);
+}
+.content .news-tags a::before{
+	content: "\f02b";
+	font-family: "Font Awesome 6 Pro";
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.95);
+	margin-right: 5px;
+}
+.content .news-tags a:hover{
+	background-color: rgba(59,113,199,0.95);
+	color: rgba(255,255,255,0.95);
+}
+.content .news-tags a:hover::before{
+	color: rgba(255,255,255,0.95);
+}
+
+/**************
+ON Content Nav
+**************/
+.content-nav,
+.content-popular{
+	margin: 20px 0 0 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.content-nav::before,
+.content-popular::before{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	content: '';
+	width: 1px;
+	height: 50%;
+	background-color: rgba(0,0,0,0.3);
+	left: 50%;
+}
+.content-nav .content-prev,
+.content-nav .content-next{
+	flex-basis: 50%;
+}
+.content-nav .content-link{
+	overflow: hidden;
+}
+.content-nav .content-img,
+.content-popular .news-thumb{
+	margin: 0;
+	padding: 0;
+	width: 40%;
+	height: 200px;
+	position: relative;
+}
+.content-nav .content-prev .content-img{
+	margin-right: 20px;
+	float: left;
+}
+.content-nav .content-next .content-img{
+	margin-left: 20px;
+	float: right;
+}
+.content-nav .content-desc{
+	margin: 55px 0 10px 0;
+	display: block;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: rgba(83,83,83,0.95);
+}
+.content-nav .content-title{
+	font-size: 18px;
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.95);
+}
+.content-nav .content-next .content-desc,
+.content-nav .content-next .content-title{
+	margin-left: 20px;
+	text-align: right;
+}
+.content-nav .content-prev .content-desc,
+.content-nav .content-prev .content-title{
+	margin-right: 20px;
+	text-align: left;
+}
+
+/******************
+ON Content Popular
+******************/
+.content-popular{
+	padding: 0 10px;
+}
+.content-popular .popular-card{
+	flex-basis: 48%;
+	padding: 10px 0;
+}
+.content-popular .news-thumb{
+	float: left;
+}
+.content-popular .news-thumb img{
+	width: 100%;
+	height: 100%;
+}
+.content-popular .news-cats{
+	padding: 0 5px;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	width: 100%;
+}
+.content-popular .news-cats a{
+	padding: 5px 10px;
+    margin-right: 10px;
+}
+.content-popular .news-title,
+.content-popular .news-meta,
+.content-popular .news-text{
+	margin: 0 15px 10px 15px;
+	width: 55%;
+	float: left;
+}
+.content-popular .news-title{
+	margin-top: 5px;
+}
+.content-popular .news-title h3,
+.content-popular .news-title a{
+	font-size: 20px;
+}
+.content-popular .news-meta{
+	padding: 2px 0;
+	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  	align-items: center;
+}
+.content-popular .author::before,
+.content-popular .date::before,
+.content-popular .comments::before{
+	font-size: 14px;
+}
+.content-popular .news-meta a,
+.content-popular .news-meta span{
+	margin: 0;
+}
+.content-popular .news-text{
+	margin-bottom: 5px;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: left;
+	color: rgba(0,0,0,0.95);
+}
+
+/************
+ON Sidebar
+************/
+.sidebar{
+	padding: 20px;
+	position: relative
+}
+.sidebar::before{
+	position: absolute;
+	top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 768px){
+	
+	/********
+	ON Header
+	********/
+	.header .form-search{
+		margin: 15px 0 0 0;
+		display: block !important;
+		width: 100% !important;
+	}
+	
+}
