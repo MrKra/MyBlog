@@ -451,6 +451,33 @@ ON Content Nav
 .content-nav .content-link{
 	overflow: hidden;
 }
+.content-nav .content-prev::before,
+.content-nav .content-next::before{
+	position: absolute;
+	font-family: "Font Awesome 6 Pro";
+	font-size: 50px;
+	color: rgba(255, 255, 255, 0.95);
+	cursor: pointer;
+	opacity: 0;
+	z-index: 1;
+}
+.content-nav .content-prev::before{
+	content: "\f137";
+	top: 42%;
+	left: 8%;
+}
+.content-nav .content-next::before{
+	content: "\f138";
+	top: 42%;
+	right: 8%;
+}
+.content-nav .content-prev:hover::before,
+.content-nav .content-next:hover::before,
+.content-nav .content-prev:hover .content-title,
+.content-nav .content-next:hover .content-title{
+	color: rgba(59,113,199,0.95);
+	opacity: 1;
+}
 .content-nav .content-img,
 .content-popular .news-thumb{
 	margin: 0;
@@ -556,6 +583,21 @@ ON Content Popular
 	line-height: 1.5;
 	text-align: left;
 	color: rgba(0,0,0,0.95);
+}
+
+/*****************
+ON Block Comments
+*****************/
+.wrapper-comments{
+	margin-top: 20px;
+	padding: 20px 0;
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.comments-list{
+	margin-right: 30px;
+	list-style: none;
+	border: 1px solid red;
 }
 
 /************
