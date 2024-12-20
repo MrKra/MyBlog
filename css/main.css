@@ -31,7 +31,7 @@ a:focus{
 }
 .wraper-post{
 	background: rgba(255,255,255,0.95);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15); 
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15); 
 }
 
 /********
@@ -39,7 +39,7 @@ ON Header
 ********/
 .header{
 	background: rgba(255,255,255,0.95);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
 .header .header-nav{ 
 	padding: 15px 30px;
@@ -74,13 +74,13 @@ ON News Card
 .news-card{
 	margin: 0 0 20px 0;
 	background: rgba(255,255,255,0.95);
-	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
 	transition: all 0.5s;
 	border-radius: 10px;
 }
 .news-card:hover,
 .news-card:focus{
-	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.25);
 }
 .news-card .news-thumb{
 	height: 245px;
@@ -113,12 +113,12 @@ ON News Card
 	font-size: 12px;
 	font-weight: 500;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255,255,255,0.95);
     cursor: pointer;
     vertical-align: bottom;
     background: rgba(0, 0, 0, 0.80);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 9px -4px rgba(0,0,0,0.35);
     border-radius: 10rem;
 }
 .news-card .news-cats a::before,
@@ -126,14 +126,14 @@ ON News Card
 	content: "\f5fd";
 	font-family: "Font Awesome 6 Pro";
 	font-size: 12px;
-	color: rgba(255, 255, 255, 0.95);
+	color: rgba(255,255,255,0.95);
 	margin-right: 5px;
 }
 .news-card .news-cats a:hover,
 .content .news-cats a:hover,
 .content-popular .news-cats a:hover{
 	color: rgba(0,0,0,0.95);
-	background: rgba(255, 255, 255, 0.80);
+	background: rgba(255,255,255,0.80);
 }
 .news-card .news-cats a:hover::before,
 .content .news-cats a:hover::before,
@@ -175,14 +175,12 @@ ON News Card
 .content-popular .news-title h3:hover a{
 	color: rgba(59,113,199,0.95);
 }
-.news-card .news-meta{
-	padding: 5px 15px;
-}
+.news-card .news-meta{padding: 5px 15px;}
 .news-card .news-meta,
 .content .news-meta,
 .content-popular .news-meta{
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 .news-card .news-meta a,
 .news-card .news-meta span,
@@ -205,35 +203,35 @@ ON News Card
 .content .time-clock::before,
 .content-popular .author::before,
 .content-popular .date::before,
-.content-popular .comments::before{
+.content-popular .comments::before,
+.comments-list .comment-autor::before,
+.comments-list .comment-date::before,
+.comments-list .comment-time-clock::before{
 	font-family: "Font Awesome 6 Pro";
 	font-size: 16px;
 	margin-right: 10px;
 }
 .news-card .author::before,
 .content .author::before,
-.content-popular .author::before{
-	content: "\f007";
-}
+.content-popular .author::before,
+.comments-list .comment-autor::before{content: "\f007";}
 .news-card .date::before,
 .content .date::before,
-.content-popular .date::before{
-	content: "\f073";
-}
+.content-popular .date::before,
+.comments-list .comment-date::before{content: "\f073";}
 .news-card .comments::before,
 .content .comments::before,
-.content-popular .comments::before{
-	content: "\f086";
-}
-.content .time-clock::before{
-	content: "\f017";
-}
+.content-popular .comments::before{content: "\f086";}
+.content .time-clock::before,
+.comments-list .comment-time-clock::before{content: "\f017";}
 .news-card .news-meta a:hover,
 .content .news-meta a:hover,
 .content-popular .news-meta a:hover,
+.comments-list .comment-meta a:hover,
 .news-card .news-meta a:hover::before,
 .content .news-meta a:hover::before,
-.content-popular .news-meta a:hover::before{
+.content-popular .news-meta a:hover::before,
+.comments-list .comment-meta a:hover::before{
 	color: rgba(59,113,199,0.95);
 }
 
@@ -250,11 +248,13 @@ ON Content
     right: 0;
     content: "";
     height: 100%;
-    border-right: 1px solid rgba(255,255,255, 0.35);
+    border-right: 1px solid rgba(255,255,255,0.35);
 }
 .content .news-cats,
 .content .news-meta,
-.content .news-tags{
+.content .news-tags,
+.comments-list .comment-meta,
+.comments-list .comment-rating{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -269,19 +269,19 @@ ON Content
 	font-size: 14px;
 	font-weight: 500;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255,255,255,0.95);
     cursor: pointer;
     vertical-align: bottom;
     background: rgba(0, 0, 0, 0.80);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
     border-radius: 10rem;
 }
 .content .news-cats a::before{
 	content: "\f5fd";
 	font-family: "Font Awesome 6 Pro";
 	font-size: 14px;
-	color: rgba(255, 255, 255, 0.95);
+	color: rgba(255,255,255,0.95);
 	margin-right: 5px;
 }
 .content .news-title{
@@ -297,9 +297,7 @@ ON Content
 	color: rgba(0,0,0,0.95);
 	cursor: default;
 }
-.content .news-meta{
-	padding: 10px 0;
-}
+.content .news-meta{padding: 10px 0;}
 .content .news-img{
 	margin-top: 20px;
 	margin-bottom: 40px;
@@ -320,9 +318,7 @@ ON Content
 	cursor: default;
 	color: rgba(23,23,23,0.85);
 }
-.content .news-text{
-	margin-bottom: 20px;
-}
+.content .news-text{margin-bottom: 20px;}
 .content .news-text p{
 	margin-bottom: 10px;
 	display: block;
@@ -360,24 +356,12 @@ ON Content
 	cursor: default;
 	font-weight: 600;
 }
-.content .news-text h1{
-	font-size: 40px;
-}
-.content .news-text h2{
-	font-size: 38px;
-}
-.content .news-text h3{
-	font-size: 36px;
-}
-.content .news-text h4{
-	font-size: 34px;
-}
-.content .news-text h5{
-	font-size: 32px;
-}
-.content .news-text h6{
-	font-size: 30px;
-}
+.content .news-text h1{font-size: 40px;}
+.content .news-text h2{font-size: 38px;}
+.content .news-text h3{font-size: 36px;}
+.content .news-text h4{font-size: 34px;}
+.content .news-text h5{font-size: 32px;}
+.content .news-text h6{font-size: 30px;}
 .content .news-text ul,
 .content .news-text ol{
 	margin: 10px 0;
@@ -400,8 +384,8 @@ ON Content
 }
 .content .news-tags a{
 	font-size: 12px;
-    color: rgba(0, 0, 0, 0.95);
-    background: rgba(255, 255, 255, 0.95);
+    color: rgba(0,0,0,0.95);
+    background: rgba(255,255,255,0.95);
 }
 .content .news-tags a::before{
 	content: "\f02b";
@@ -431,7 +415,7 @@ ON Content Nav
 	align-items: center;
 	position: relative;
 	background: rgba(255,255,255,0.95);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
 .content-nav::before,
 .content-popular::before{
@@ -456,7 +440,7 @@ ON Content Nav
 	position: absolute;
 	font-family: "Font Awesome 6 Pro";
 	font-size: 50px;
-	color: rgba(255, 255, 255, 0.95);
+	color: rgba(255,255,255,0.95);
 	cursor: pointer;
 	opacity: 0;
 	z-index: 1;
@@ -520,16 +504,12 @@ ON Content Nav
 /******************
 ON Content Popular
 ******************/
-.content-popular{
-	padding: 0 10px;
-}
+.content-popular{padding: 0 10px;}
 .content-popular .popular-card{
 	flex-basis: 48%;
 	padding: 10px 0;
 }
-.content-popular .news-thumb{
-	float: left;
-}
+.content-popular .news-thumb{float: left;}
 .content-popular .news-thumb img{
 	width: 100%;
 	height: 100%;
@@ -552,13 +532,9 @@ ON Content Popular
 	width: 55%;
 	float: left;
 }
-.content-popular .news-title{
-	margin-top: 5px;
-}
+.content-popular .news-title{margin-top: 5px;}
 .content-popular .news-title h3,
-.content-popular .news-title a{
-	font-size: 20px;
-}
+.content-popular .news-title a{font-size: 20px;}
 .content-popular .news-meta{
 	padding: 2px 0;
 	display: flex;
@@ -573,9 +549,7 @@ ON Content Popular
 	font-size: 14px;
 }
 .content-popular .news-meta a,
-.content-popular .news-meta span{
-	margin: 0;
-}
+.content-popular .news-meta span{margin: 0;}
 .content-popular .news-text{
 	margin-bottom: 5px;
 	padding: 0;
@@ -592,12 +566,117 @@ ON Block Comments
 	margin-top: 20px;
 	padding: 20px 0;
 	background: rgba(255,255,255,0.95);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
 .comments-list{
-	margin-right: 30px;
+	margin-right: 20px;
+	padding: 0;
 	list-style: none;
-	border: 1px solid red;
+}
+.comments-list .comments-item{
+	display: block;
+	margin-bottom: 15px;
+	padding: 0;
+}
+.comments-list .comments-item ul{
+	display: block;
+	margin: 15px 0 15px 35px;
+	padding: 0;
+	list-style: none;
+}
+.comments-list .comments-item ul li{
+	display: block;
+	margin-bottom: 15px;
+	padding: 0;
+}
+.comments-list .comments-item:last-child,
+.comments-list .comments-item ul li:last-child{
+	margin-bottom: 0;
+}
+.comments-list .comment{
+	margin: 0;
+	padding-left: 50px;
+    position: relative;
+    min-height: 40px;
+}
+.comments-list .comment-ava{
+	position: absolute;
+    left: 0;
+    top: 6%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50%;
+	cursor: default;
+}
+.comments-list .comment-meta{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.comments-list .comment-meta a,
+.comments-list .comment-meta span{
+	margin-right: 20px;
+	font-size: 15px;
+	color: rgba(14,14,14,0.95);
+}
+.comments-list .comment-autor::before,
+.comments-list .comment-date::before,
+.comments-list .comment-time-clock::before{
+	font-size: 15px;
+	margin-right: 5px;
+}
+.comments-list .comment-text,
+.comments-list .comment-text p{
+    margin: 10px 0;
+    padding: 0;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(14,14,14,0.95);
+	cursor: default;
+}
+.comments-list .comment-rating span{
+	margin-right: 35px;
+	font-size: 16px;
+	color: rgba(0,0,0,0.95);
+	cursor: default;
+}
+.comments-list .comment-rating .comment-like::before,
+.comments-list .comment-rating .comment-dizlike::before{
+	font-family: "Font Awesome 6 Pro";
+	font-size: 20px;
+	margin-right: 5px;
+	color: rgba(0,0,0,0.95);
+	cursor: pointer;
+}
+.comments-list .comment-rating .comment-like::before{content: "\f004";}
+.comments-list .comment-rating .comment-dizlike::before{content: "\f7a9";}
+.comments-list .comment-rating .comment-like:hover::before{color: rgba(1,122,4,0.95);}
+.comments-list .comment-rating .comment-dizlike:hover::before{color: rgba(227,0,3,0.95);}
+.comments-list .comment-button{
+	padding: 0px 10px;
+	margin-left: 30px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	color: rgba(0,0,0,1);
+}
+.comments-list .comment-button:hover{
+	padding: 0px 10px;
+    color: rgba(0,0,0,1);
+    cursor: pointer;
+    vertical-align: bottom;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px -2px rgba(0,0,0,0.5);
+    border-radius: 10rem; 
 }
 
 /************
@@ -613,7 +692,7 @@ ON Sidebar
     left: 0;
     content: "";
     height: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(0,0,0,0.25);
 }
 
 @media only screen and (max-width: 768px){
