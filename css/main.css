@@ -26,7 +26,7 @@ a:focus{
 	color: rgba(255,255,255,0.95);
 }
 .wraper{
-	margin: 20px 0;
+	margin: 20px 12px;
 	padding: 0;
 }
 .wraper-post{
@@ -38,6 +38,7 @@ a:focus{
 ON Header
 ********/
 .header{
+	margin-bottom: 20px;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
@@ -60,22 +61,27 @@ ON Header
 	margin: 0 15px;
 }
 .header .header-soc{
-	display: flex;
+	display: flex !important;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
 	flex-grow: 1;
 }
+.header .header-soc a{
+	font-size: 26px;
+	margin-left:  25px;
+	color: rgba(0,0,0,0.95);
+}
 
 /************
 ON News Card
 ************/
 .news-card{
-	margin: 0 0 20px 0;
-	background: rgba(255,255,255,0.95);
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
-	transition: all 0.5s;
+	margin-bottom: 20px;
+	background: rgba(255,255,255,.95);
+	box-shadow: 0 3px 6px rgba(0,0,0,.15);
+	transition: .5s;
 	border-radius: 10px;
 }
 .news-card:hover,
@@ -264,18 +270,17 @@ ON Content
 }
 .content .news-cats a,
 .content .news-tags a{
-	padding: 0px 12px;
+	padding: 6px 12px;
 	margin-right: 15px;
-	font-size: 14px;
-	font-weight: 500;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.95);
-    cursor: pointer;
-    vertical-align: bottom;
-    background: rgba(0, 0, 0, 0.80);
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
-    border-radius: 10rem;
+	font: 500 14px/1.2 Roboto;
+	text-transform: uppercase;
+	color: rgba(255,255,255,.95);
+	cursor: pointer;
+	vertical-align: bottom;
+	background: rgba(0,0,0,.8);
+	transition: all .15s ease-in-out;
+	box-shadow: 0 5px 10px -5px rgba(0,0,0,.5);
+	border-radius: 10rem;
 }
 .content .news-cats a::before{
 	content: "\f5fd";
@@ -407,7 +412,7 @@ ON Content Nav
 **************/
 .content-nav,
 .content-popular{
-	margin: 20px 0 0 0;
+	margin: 20px 0 0;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
@@ -417,24 +422,28 @@ ON Content Nav
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
+
 .content-nav::before,
 .content-popular::before{
+	content: '';
 	position: absolute;
 	top: 50%;
+	left: 50%;
 	transform: translateY(-50%);
-	content: '';
 	width: 1px;
 	height: 50%;
-	background-color: rgba(0,0,0,0.3);
-	left: 50%;
+	background: rgba(0,0,0,0.3);
 }
+
 .content-nav .content-prev,
 .content-nav .content-next{
 	flex-basis: 50%;
 }
+
 .content-nav .content-link{
 	overflow: hidden;
 }
+
 .content-nav .content-prev::before,
 .content-nav .content-next::before{
 	position: absolute;
@@ -444,17 +453,19 @@ ON Content Nav
 	cursor: pointer;
 	opacity: 0;
 	z-index: 1;
+	top: 42%;
 }
+
 .content-nav .content-prev::before{
 	content: "\f137";
-	top: 42%;
 	left: 8%;
 }
+
 .content-nav .content-next::before{
-	content: "\f138";
-	top: 42%;
+	content: "\f138"; 
 	right: 8%;
 }
+
 .content-nav .content-prev:hover::before,
 .content-nav .content-next:hover::before,
 .content-nav .content-prev:hover .content-title,
@@ -462,39 +473,44 @@ ON Content Nav
 	color: rgba(59,113,199,0.95);
 	opacity: 1;
 }
+
 .content-nav .content-img,
 .content-popular .news-thumb{
-	margin: 0;
-	padding: 0;
 	width: 40%;
 	height: 200px;
 	position: relative;
 }
+
 .content-nav .content-prev .content-img{
 	margin-right: 20px;
 	float: left;
 }
+
 .content-nav .content-next .content-img{
 	margin-left: 20px;
 	float: right;
 }
+
 .content-nav .content-desc{
-	margin: 55px 0 10px 0;
+	margin: 55px 0 10px;
 	display: block;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: rgba(83,83,83,0.95);
 }
+
 .content-nav .content-title{
 	font-size: 18px;
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.95);
 }
+
 .content-nav .content-next .content-desc,
 .content-nav .content-next .content-title{
 	margin-left: 20px;
 	text-align: right;
 }
+
 .content-nav .content-prev .content-desc,
 .content-nav .content-prev .content-title{
 	margin-right: 20px;
@@ -642,14 +658,16 @@ ON Block Comments
     color: rgba(14,14,14,0.95);
 	cursor: default;
 }
-.comments-list .comment-rating span{
+.comments-list .comment-rating button{
 	margin-right: 35px;
 	font-size: 16px;
 	color: rgba(0,0,0,0.95);
-	cursor: default;
+	cursor: pointer;
+	border: 0;
+	background: none;
 }
 .comments-list .comment-rating .comment-like::before,
-.comments-list .comment-rating .comment-dizlike::before{
+.comments-list .comment-rating .comment-dislike::before{
 	font-family: "Font Awesome 6 Pro";
 	font-size: 20px;
 	margin-right: 5px;
@@ -657,20 +675,20 @@ ON Block Comments
 	cursor: pointer;
 }
 .comments-list .comment-rating .comment-like::before{content: "\f004";}
-.comments-list .comment-rating .comment-dizlike::before{content: "\f7a9";}
+.comments-list .comment-rating .comment-dislike::before{content: "\f7a9";}
 .comments-list .comment-rating .comment-like:hover::before{color: rgba(1,122,4,0.95);}
-.comments-list .comment-rating .comment-dizlike:hover::before{color: rgba(227,0,3,0.95);}
-.comments-list .comment-button{
+.comments-list .comment-rating .comment-dislike:hover::before{color: rgba(227,0,3,0.95);}
+.comments-list .comment-reply{
 	padding: 0px 10px;
 	margin-left: 30px;
 	font-size: 12px;
 	font-weight: 600;
-	text-transform: uppercase;
+	text-transform: none;
 	cursor: pointer;
 	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 	color: rgba(0,0,0,1);
 }
-.comments-list .comment-button:hover{
+.comments-list .comment-reply:hover{
 	padding: 0px 10px;
     color: rgba(0,0,0,1);
     cursor: pointer;

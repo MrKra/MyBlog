@@ -1,60 +1,54 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Сайт о мифических существах">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="css/mdb.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<title>Post</title>
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/mdb.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Мифические существа</title>
 </head>
 <body>
 <header class="header">
 	<div class="container-fluid">
-		<div class="row">
-			<nav class="header-nav">
-				<a class="header-logo order-md-1" href="#">Navbar</a>
-				<div class="d-flex header-soc order-md-3">
-					<!-- Facebook -->
-					<a href="#!"><i class="fa-brands fa-facebook"></i></a>
-					<!-- Vkontakte -->
-					<a href="#!"><i class="fa-brands fa-vk"></i></a>
-					<!-- Twitter -->
-					<a href="#!"><i class="fa-brands fa-twitter"></i></a>
-					<!-- telegram -->
-					<a href="#!"><i class="fa-brands fa-telegram"></i></a>
-      			</div>
-				<form class="d-flex input-group w-auto form-search order-md-2">
-					<div class="input-group">
-						<div class="form-outline" data-mdb-input-init>
-							<input type="search" id="form1" class="form-control" />
-							<label class="form-label" for="form1">Поиск...</label>
-						</div>
-						<button type="button" class="btn btn-primary" data-mdb-ripple-init><i class="fas fa-search"></i></button>
+		<nav class="header-nav">
+			<a class="header-logo order-md-1" href="/">Мифические существа</a>
+			<div class="header-soc order-md-3">
+				<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+				<a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+			</div>
+			<form class="form-search order-md-2" role="search">
+				<div class="input-group">
+					<div class="form-outline" data-mdb-input-init>
+						<input type="search" id="search" class="form-control" aria-label="Поиск">
+						<label class="form-label" for="search">Поиск...</label>
 					</div>
-				</form>
-			</nav>
-		</div>
+					<button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+			</form>
+		</nav>
 	</div>
-</header><!-- OF Header -->
+</header>
 
-<div class="wraper">
-	
+<main class="wraper">
 	<div class="container">
 		<div class="row wraper-post">
-			
-			<div class="sidebar col-md-3 order-md-2">
+			<aside class="sidebar col-md-3 order-md-2">
 				sidebar
-			</div>
+			</aside>
 			
-			<div class="content col-md-9 order-md-1">
-				
+			<article class="content col-md-9 order-md-1">
 				<div class="news-cats">
-					<a href="#" title="#">Мифические существа</a>
-					<a href="#" title="#">Монстры</a>
-					<a href="#" title="#">Чудовища</a>
+					<a href="/category/mythical-creatures">Мифические существа</a>
+					<a href="/category/monsters">Монстры</a>
+					<a href="/category/creatures">Чудовища</a>
 				</div>
 				
 				<div class="news-title">
@@ -62,34 +56,33 @@
 				</div>
 				
 				<div class="news-meta">
-					<a class="author" href="#" title="">Admin</a>
-					<span class="date">12.05.2024</span>
-					<a class="comments" href="#" title="">коментировать</a>
+					<a class="author" href="/author/admin">Admin</a>
+					<time class="date" datetime="2024-05-12">12.05.2024</time>
+					<a class="comments" href="#comments">комментировать</a>
 					<span class="time-clock">2 мин чтение</span>
 				</div>
 				
 				<figure class="news-img">
-					<img src="img/thumbs/05.jpeg" alt="">
-					 <figcaption>Тролль на лесной дороге</figcaption>
+					<img src="img/thumbs/05.jpeg" alt="Тролль на лесной дороге">
+					<figcaption>Тролль на лесной дороге</figcaption>
 				</figure>
 				
 				<div class="news-text">
-					
 					<p>Тролли занимают особое место в северной мифологии. Они воплощают дикость, силу природы и её непредсказуемость.
-					  В преданиях тролли изображаются как могучие создания, населяющие труднодоступные места, будь то тёмные пещеры или заснеженные вершины.
-					  Несмотря на их суровость, тролли олицетворяют <a href="" title="">дух природы, её магию и древние тайны.</a></p>
+					В преданиях тролли изображаются как могучие создания, населяющие труднодоступные места, будь то тёмные пещеры или заснеженные вершины.
+					Несмотря на их суровость, тролли олицетворяют <a href="/mythical-creatures/nature-spirits">дух природы, её магию и древние тайны.</a></p>
 
-            		<p>Мифы о троллях берут начало из скандинавской мифологии. Первые упоминания о них можно найти в древних сагах и эддах.
-					  Тролли были частью пантеона существ, символизирующих грубую силу природы. Они ассоциировались с разрушительными стихиями — бурями, оползнями и землетрясениями.
-					  В фольклоре разных регионов Скандинавии тролли могли быть как гигантами, так и более мелкими существами, но всегда сохраняли свою враждебность к людям.</p>
+					<p>Мифы о троллях берут начало из скандинавской мифологии. Первые упоминания о них можно найти в древних сагах и эддах.
+					Тролли были частью пантеона существ, символизирующих грубую силу природы. Они ассоциировались с разрушительными стихиями — бурями, оползнями и землетрясениями.
+					В фольклоре разных регионов Скандинавии тролли могли быть как гигантами, так и более мелкими существами, но всегда сохраняли свою враждебность к людям.</p>
 
 					<p>Со временем их образ эволюционировал. В средневековых сказаниях они стали объектом страха, но также источником магических знаний и испытаний для героев.</p>
 
 					<p>Тролли обычно изображаются гигантами с кожей, напоминающей кору деревьев или шероховатый камень.
-					  Их цвет варьируется от серого и зеленоватого до коричневого, что помогает им сливаться с природой. Кожа троллей толстая и грубая, устойчивая к оружию и стихиям.
-					  Их рост впечатляет: от 3 до 15 метров, в зависимости от легенды, что делает их грозными и устрашающими.</p>
+					Их цвет варьируется от серого и зеленоватого до коричневого, что помогает им сливаться с природой. Кожа троллей толстая и грубая, устойчивая к оружию и стихиям.
+					Их рост впечатляет: от 3 до 15 метров, в зависимости от легенды, что делает их грозными и устрашающими.</p>
 					
-					<img src="img/thumbs/21.jpg" alt="">
+					<img src="img/thumbs/21.jpg" alt="Изображение тролля">
 
 					<p>Руки троллей огромны, с длинными пальцами, оканчивающимися когтями. Эти когти настолько прочные, что способны разрывать камень. 
 					Ноги массивные, как колонны, а ступни часто изображаются босыми, с толстой кожей, защищающей их от острых камней.</p>
@@ -100,105 +93,87 @@
 					<p>Тролли обладают невероятной физической силой и долголетием. Они практически бессмертны, если не подвергаются воздействию солнечного света. В дневное время солнечные лучи обращают их в камень. 
 					Некоторые тролли обладают магическими способностями: могут накладывать проклятия, предсказывать будущее или изменять облик. В некоторых мифах они сторожат древние сокровища или мосты, требуя плату за проход.</p>
 					
-					<h1>Популярные мифы о Тролях H1</h1>
-					<h2>Популярные мифы о Тролях H2</h2>
-					<h3>Популярные мифы о Тролях H3</h3>
-					<h4>Популярные мифы о Тролях H4</h4>
-					<h5>Популярные мифы о Тролях H5</h5>
-					<h6>Популярные мифы о Тролях H6</h6>
+					<h2>Популярные мифы о Троллях</h2>
+					<h3>Легенды о Троллях</h3>
+					<h4>Сказания о Троллях</h4>
 
 					<ul>
-					  <li>Популярные легенды о Тролях</li>
-					  <li>Популярные легенды о Тролях</li>
-					  <li>Популярные легенды о Тролях
-					  <ol>
-						<li>Популярные легенды о Тролях</li>
-						<li>Популярные легенды о Тролях</li>
-						<li>Популярные легенды о Тролях</li>
-					  </ol>
-					  </li>
-					  <li>Популярные легенды о Тролях</li>
-					  <li>Популярные легенды о Тролях</li>
-					  <li>Популярные легенды о Тролях</li>
+						<li>Тролли в скандинавской мифологии</li>
+						<li>Тролли в фольклоре</li>
+						<li>Виды троллей
+							<ol>
+								<li>Горные тролли</li>
+								<li>Лесные тролли</li>
+								<li>Морские тролли</li>
+							</ol>
+						</li>
+						<li>Способности троллей</li>
+						<li>Слабости троллей</li>
+						<li>Тролли в современной культуре</li>
 					</ul>
-					
 				</div>
 				
 				<div class="news-tags">
-					<a href="" title="">тролль</a>
-					<a href="" title="">монстры</a>
-					<a href="" title="">чудовища</a>
-					<a href="" title="">мистика</a>
-					<a href="" title="">легенды</a>
-					<a href="" title="">сказки</a>
-          		</div>
-				
-			</div><!-- OF Content -->
-			
+					<a href="/tag/troll">тролль</a>
+					<a href="/tag/monsters">монстры</a>
+					<a href="/tag/creatures">чудовища</a>
+					<a href="/tag/mystic">мистика</a>
+					<a href="/tag/legends">легенды</a>
+					<a href="/tag/tales">сказки</a>
+				</div>
+			</article>
 		</div>
-	</div><!-- OF Block Content -->
+	</div>
 	
 	<div class="container">
 		<div class="row">
-			<div class="content-nav">
-				
+			<nav class="content-nav">
 				<div class="content-prev">
-					<a class="content-link" href="" title="">
-						<img class="content-img" src="img/thumbs/26.jpg" alt="">
+					<a class="content-link" href="/mythical-creature/previous">
+						<img class="content-img" src="img/thumbs/26.jpg" alt="Предыдущая статья">
 						<span class="content-desc">следующая статья</span>
-						<h6 class="content-title">Название следующей статьи</h6>
+						<h2 class="content-title">Название следующей статьи</h2>
 					</a>
 				</div>
 				
 				<div class="content-next">
-					<a class="content-link" href="" title="">
-						<img class="content-img" src="img/thumbs/20.jpg" alt="">
+					<a class="content-link" href="/mythical-creature/next">
+						<img class="content-img" src="img/thumbs/20.jpg" alt="Следующая статья">
 						<span class="content-desc">предыдущая статья</span>
-						<h6 class="content-title">Название предидущей статьи</h6>
+						<h2 class="content-title">Название предыдущей статьи</h2>
 					</a>
 				</div>
-				
-				
-			</div>
+			</nav>
 		</div>
-	</div><!--OF Content Nav -->
-	
+	</div>
 	
 	<div class="container">
-		<div class="row wrapper-comments">
-			
+		<div class="row wrapper-comments" id="comments">
 			<div class="col-md-5 order-md-2">
-				<form action="#" method="get" class="form-comment">
+				<form class="form-comment" method="post">
 					<div class="form-outline" data-mdb-input-init>
-						<textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-						<label class="form-label" for="textAreaExample">Ваш текст комментария</label>
+						<textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+						<label class="form-label" for="comment">Ваш текст комментария</label>
 					</div>
-					<div class="comment-input" data-mdb-input-init>
+					<div class="comment-input">
 						<div class="form-outline" data-mdb-input-init>
-							<input type="text" id="typeText" class="form-control" />
-							<label class="form-label" for="typeText">Ваш псевдоним</label>
+							<input type="text" id="nickname" name="nickname" class="form-control" required>
+							<label class="form-label" for="nickname">Ваш псевдоним</label>
 						</div>
 						<div class="form-outline" data-mdb-input-init>
-							<input type="email" id="typeEmail" class="form-control" />
-							<label class="form-label" for="typeEmail">Ваш Email (не обязательно)</label>
+							<input type="email" id="email" name="email" class="form-control">
+							<label class="form-label" for="email">Ваш Email (не обязательно)</label>
 						</div>
 					</div>
-					<div class="comment-input" data-mdb-input-init>
-						<div class="form-outline" data-mdb-input-init>
-							<button type="submit" class="btn btn-primary" data-mdb-ripple-init>Коментировать</button>
-						</div>
-						<div class="form-outline" data-mdb-input-init>
-							<button type="reset" class="btn btn-dark" data-mdb-ripple-init>Очистить</button>
-						</div>
+					<div class="comment-input">
+						<button type="submit" class="btn btn-primary" data-mdb-ripple-init>Комментировать</button>
+						<button type="reset" class="btn btn-dark" data-mdb-ripple-init>Очистить</button>
 					</div>
 					
-					<div class="spoiler one">
-						<div class="spoiler-item">
-							<div class="spoiler-title">Перед тем как нажать на кнопку прочти</div>
-							<div class="spoiler-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nihil explicabo assumenda voluptatem harum perferendis modi at minima vel. Accusantium dicta modi aliquam iusto animi amet, reiciendis fugit quasi voluptas.</div>
-						</div>
-					</div>
-					
+					<details class="spoiler">
+						<summary class="spoiler-title">Перед тем как нажать на кнопку прочти</summary>
+						<div class="spoiler-text">Пожалуйста, соблюдайте правила комментирования. Будьте вежливы и конструктивны в своих комментариях.</div>
+					</details>
 				</form>
 			</div>
 			
@@ -206,357 +181,57 @@
 				<ul class="comments-list">
 					<li class="comments-item">
 						<div class="comment">
-							<div class="comment-ava">s</div>
+							<div class="comment-ava">S</div>
 							<div class="comment-meta">
-								<a class="comment-autor" href="#" title="#">Saniok</a>
-								<span class="comment-date">20.12.2024</span>
-								<span class="comment-time-clock">12:35</span>
+								<a class="comment-autor" href="/user/saniok">Saniok</a>
+								<time class="comment-date" datetime="2024-12-20T12:35">20.12.2024 12:35</time>
 							</div>
 							<div class="comment-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore architecto beatae totam, aperiam tempora sequi neque odio, aut mollitia, tempore velit eius. 
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore architecto beatae totam, aperiam tempora sequi neque odio, aut mollitia, tempore velit eius.
 							</div>
 							<div class="comment-rating">
-								<span class="comment-like">14</span>
-								<span class="comment-dizlike">8</span>
-								<a class="comment-button" href="#" title="#">Ответить</a>
-							</div>
-						</div>
-					</li>
-					<li class="comments-item">
-						<div class="comment">
-							<div class="comment-ava">s</div>
-							<div class="comment-meta">
-								<a class="comment-autor" href="#" title="#">Saniok</a>
-								<span class="comment-date">20.12.2024</span>
-								<span class="comment-time-clock">12:35</span>
-							</div>
-							<div class="comment-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-							</div>
-							<div class="comment-rating">
-								<span class="comment-like">14</span>
-								<span class="comment-dizlike">8</span>
-								<a class="comment-button" href="#" title="#">Ответить</a>
-							</div>
-						</div>
-					</li>
-					<li class="comments-item">
-						<ul>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore architecto beatae totam, aperiam tempora sequi neque odio, aut mollitia, tempore velit eius. 
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore architecto beatae totam, aperiam tempora sequi neque odio, aut mollitia, tempore velit eius. 
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore architecto beatae totam, aperiam tempora sequi neque odio, aut mollitia, tempore velit eius. 
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li class="comments-item">
-						<div class="comment">
-							<div class="comment-ava">s</div>
-							<div class="comment-meta">
-								<a class="comment-autor" href="#" title="#">Saniok</a>
-								<span class="comment-date">20.12.2024</span>
-								<span class="comment-time-clock">12:35</span>
-							</div>
-							<div class="comment-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-							</div>
-							<div class="comment-rating">
-								<span class="comment-like">14</span>
-								<span class="comment-dizlike">8</span>
-								<a class="comment-button" href="#" title="#">Ответить</a>
-							</div>
-						</div>
-					</li>
-					<li class="comments-item">
-						<ul>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<ul>
-									<li>
-										<div class="comment">
-											<div class="comment-ava">s</div>
-											<div class="comment-meta">
-												<a class="comment-autor" href="#" title="#">Saniok</a>
-												<span class="comment-date">20.12.2024</span>
-												<span class="comment-time-clock">12:35</span>
-											</div>
-											<div class="comment-text">
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-											</div>
-											<div class="comment-rating">
-												<span class="comment-like">14</span>
-												<span class="comment-dizlike">8</span>
-												<a class="comment-button" href="#" title="#">Ответить</a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="comment">
-											<div class="comment-ava">s</div>
-											<div class="comment-meta">
-												<a class="comment-autor" href="#" title="#">Saniok</a>
-												<span class="comment-date">20.12.2024</span>
-												<span class="comment-time-clock">12:35</span>
-											</div>
-											<div class="comment-text">
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-											</div>
-											<div class="comment-rating">
-												<span class="comment-like">14</span>
-												<span class="comment-dizlike">8</span>
-												<a class="comment-button" href="#" title="#">Ответить</a>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="comment">
-									<div class="comment-ava">s</div>
-									<div class="comment-meta">
-										<a class="comment-autor" href="#" title="#">Saniok</a>
-										<span class="comment-date">20.12.2024</span>
-										<span class="comment-time-clock">12:35</span>
-									</div>
-									<div class="comment-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-									</div>
-									<div class="comment-rating">
-										<span class="comment-like">14</span>
-										<span class="comment-dizlike">8</span>
-										<a class="comment-button" href="#" title="#">Ответить</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li class="comments-item">
-						<div class="comment">
-							<div class="comment-ava">s</div>
-							<div class="comment-meta">
-								<a class="comment-autor" href="#" title="#">Saniok</a>
-								<span class="comment-date">20.12.2024</span>
-								<span class="comment-time-clock">12:35</span>
-							</div>
-							<div class="comment-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vitae placeat ea, assumenda consequuntur quia fugit voluptatem ex molestias architecto a tempore iste dolorum, voluptates officiis odio dicta perspiciatis quibusdam.
-							</div>
-							<div class="comment-rating">
-								<span class="comment-like">14</span>
-								<span class="comment-dizlike">8</span>
-								<a class="comment-button" href="#" title="#">Ответить</a>
+								<button class="comment-like" aria-label="Нравится">14</button>
+								<button class="comment-dislike" aria-label="Не нравится">8</button>
+								<button class="comment-reply">Ответить</button>
 							</div>
 						</div>
 					</li>
 				</ul>
 			</div>
-			
 		</div>
 	</div>
 	
-	
 	<div class="container">
 		<div class="row">
-			<div class="content-popular">
-				
+			<section class="content-popular">
 				<div class="popular-card">
 					<div class="news-thumb">
-						<img src="img/thumbs/001.jpg" alt="#">
+						<img src="img/thumbs/001.jpg" alt="Название статьи">
 						<div class="news-cats">
-							<a href="#" title="#">Монстры</a>
-							<a href="#" title="#">Чудовища</a>
-							<a href="#" title="#">мифы</a>
+							<a href="/category/monsters">Монстры</a>
+							<a href="/category/creatures">Чудовища</a>
+							<a href="/category/myths">мифы</a>
 						</div>
 					</div>
 					<div class="news-title">
-						<h3><a href="#" title="#">Какоето название статьи</a></h3>
+						<h3><a href="/mythical-creature/article">Название статьи</a></h3>
 					</div>
 					<div class="news-meta">
-						<a class="author" href="" title="">admin</a>
-						<span class="date">12.05.2024</span>
-						<a class="comments" href="" title="">коменировать</a>
+						<a class="author" href="/author/admin">admin</a>
+						<time class="date" datetime="2024-05-12">12.05.2024</time>
+						<a class="comments" href="/mythical-creature/article#comments">комментировать</a>
 					</div>
 					<div class="news-text">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, debitis, laborum. Similique voluptatem nobis animi dolorum sed quisquam, dicta tempora, fuga a nihil consequuntur aspernatur sequi et officiis recusandae omnis.</p>
 					</div>
-				</div><!-- OF Card Popular-->
-				
-				<div class="popular-card">
-					<div class="news-thumb">
-						<img src="img/thumbs/001.jpg" alt="#">
-						<div class="news-cats">
-							<a href="#" title="#">Монстры</a>
-							<a href="#" title="#">Чудовища</a>
-							<a href="#" title="#">мифы</a>
-						</div>
-					</div>
-					<div class="news-title">
-						<h3><a href="#" title="#">Какоето название статьи</a></h3>
-					</div>
-					<div class="news-meta">
-						<a class="author" href="" title="">admin</a>
-						<span class="date">12.05.2024</span>
-						<a class="comments" href="" title="">коменировать</a>
-					</div>
-					<div class="news-text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, debitis, laborum. Similique voluptatem nobis animi dolorum sed quisquam, dicta tempora, fuga a nihil consequuntur aspernatur sequi et officiis recusandae omnis.</p>
-					</div>
-				</div><!-- OF Card Popular-->
-				
-				<div class="popular-card">
-					<div class="news-thumb">
-						<img src="img/thumbs/001.jpg" alt="#">
-						<div class="news-cats">
-							<a href="#" title="#">Монстры</a>
-							<a href="#" title="#">Чудовища</a>
-							<a href="#" title="#">мифы</a>
-						</div>
-					</div>
-					<div class="news-title">
-						<h3><a href="#" title="#">Какоето название статьи</a></h3>
-					</div>
-					<div class="news-meta">
-						<a class="author" href="" title="">admin</a>
-						<span class="date">12.05.2024</span>
-						<a class="comments" href="" title="">коменировать</a>
-					</div>
-					<div class="news-text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, debitis, laborum. Similique voluptatem nobis animi dolorum sed quisquam, dicta tempora, fuga a nihil consequuntur aspernatur sequi et officiis recusandae omnis.</p>
-					</div>
-				</div><!-- OF Card Popular-->
-				
-				<div class="popular-card">
-					<div class="news-thumb">
-						<img src="img/thumbs/001.jpg" alt="#">
-						<div class="news-cats">
-							<a href="#" title="#">Монстры</a>
-							<a href="#" title="#">Чудовища</a>
-							<a href="#" title="#">мифы</a>
-						</div>
-					</div>
-					<div class="news-title">
-						<h3><a href="#" title="#">Какоето название статьи</a></h3>
-					</div>
-					<div class="news-meta">
-						<a class="author" href="" title="">admin</a>
-						<span class="date">12.05.2024</span>
-						<a class="comments" href="" title="">коменировать</a>
-					</div>
-					<div class="news-text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, debitis, laborum. Similique voluptatem nobis animi dolorum sed quisquam, dicta tempora, fuga a nihil consequuntur aspernatur sequi et officiis recusandae omnis.</p>
-					</div>
-				</div><!-- OF Card Popular-->
-				
-			</div>
+				</div>
+			</section>
 		</div>
-	</div><!-- OF Content Popular-->	
-	
-</div>
-	
-<script type="text/javascript" src="js/jQuery-v3.js"></script>
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+	</div>
+</main>
+
+<script src="js/jQuery-v3.js"></script>
+<script src="js/mdb.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
