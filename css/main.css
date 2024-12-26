@@ -26,7 +26,7 @@ a:focus{
 	color: rgba(255,255,255,0.95);
 }
 .wraper{
-	margin: 20px 12px;
+	margin: 20px;
 	padding: 0;
 }
 .wraper-post{
@@ -37,13 +37,13 @@ a:focus{
 /********
 ON Header
 ********/
-.header{
+/*****.header{
 	margin-bottom: 20px;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
 .header .header-nav{ 
-	padding: 15px 30px;
+	padding: 15px 20px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -72,7 +72,7 @@ ON Header
 	font-size: 26px;
 	margin-left:  25px;
 	color: rgba(0,0,0,0.95);
-}
+}*****/
 
 /************
 ON News Card
@@ -154,7 +154,7 @@ ON News Card
 .news-card .news-text,
 .news-card .news-text p{
 	margin: 0;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	text-align: left;
 	line-height: 1.4;
@@ -189,11 +189,11 @@ ON News Card
     border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 .news-card .news-meta a,
-.news-card .news-meta span,
+.news-card .news-meta time,
 .content .news-meta a,
-.content .news-meta span,
+.content .news-meta time,
 .content-popular .news-meta a,
-.content-popular .news-meta span{
+.content-popular .news-meta time{
 	margin-right: 25px;
 	font-size: 14px;
 	font-weight: 500;
@@ -730,7 +730,9 @@ ON Form Coments
 	float: right;
 	transition: all 0.5s ease 0s;
 }
-.spoiler-title.active::after{
+.spoiler-title.active::after,
+.sidebar .sidebar-menu-title.active::after,
+.sidebar-menu-item.active .submenu-arrow{
 	transform: rotate(180deg);
 }
 .form-comment .spoiler-text{
@@ -748,17 +750,100 @@ ON Form Coments
 ON Sidebar
 ************/
 .sidebar{
-	padding: 20px;
-	position: relative
+	padding: 20px 0;
+	height: 100vh;
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	background: #fff;
 }
-.sidebar::before{
-	position: absolute;
-	top: 0;
-    left: 0;
-    content: "";
-    height: 100%;
-    border-right: 1px solid rgba(0,0,0,0.25);
+.sidebar .header{
+	padding: 0 20px;
+	display: flex;
+	gap: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+.sidebar .header-logo{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.sidebar .header-logo img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.sidebar .header-desc{
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0,0,0,0.95);
+}
+.sidebar .sidebar-menu{
+	padding: 0 20px;
+}
+.sidebar .sidebar-menu-title{
+	display: block;
+	margin-top: 20px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.sidebar .sidebar-menu-title:first-child{
+	margin-top: 0;
+}
+.sidebar .sidebar-menu-title::after{
+	content: "\f078";
+	font-family: "Font Awesome 6 Pro";
+	font-size: 16px;
+	float: right;
+	transition: all 0.5s ease 0s;
+}
+.sidebar .submenu-arrow{
+	float: right;
+	transition: all 0.5s ease 0s;
+}
+.sidebar .sidebar-menu-list{
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	/*display: none;*/
+	list-style: none;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.sidebar .sidebar-menu-item,
+.sidebar .sidebar-menu-subitem{
+	display: block;
+	margin-bottom: 5px;
+}
+.sidebar .sidebar-menu-link{
+	display: block;
+	padding: 6px 12px 6px 20px;
+	font-size: 14px;
+	color: rgba(0,0,0,0.95);
+}
+.sidebar .sidebar-menu-sublist{
+	display: none;
+	margin: 0 0 0 20px;
+	padding: 0 0 0 20px;
+	list-style: none;
+}
+.sidebar .sidebar-menu-sublink{
+	padding: 6px 12px 6px 20px;
+	font-size: 14px;
+	color: rgba(0,0,0,0.95);
+}
+
+
+
+
 
 @media only screen and (max-width: 768px){
 	
